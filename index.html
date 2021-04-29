@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Project C78</title>
+    </head>
+    <body>
+        <h1 id="myfam">My Family</h1>;
+        <img src="0-337_family-clipart-walking-cute-borders-vectors-animated-family.png" id="member_img" style="width: 30%;">
+        <h4 id="member_name">family book</h4>;
+        <button onclick="update();">Next</button>;
+    </body>
+    <style>
+        body{
+          text-align: center;
+          background-color: rgb(0, 225, 255);    
+        }
+    </style>
+    <script>
+        var names = ["Nanda Ronanki", "Hema Ronanki", "Neel Ronanki", "Aditya Ronanki", "Jagadeswari Ronanki", "Rama Rao Ronanki"];
+        var pics = ["father.jpg", "mother.jpg", "neel.jpg", "aditya.jpg", "grandmother.png", "gfather.jpg"];
+        i = 0;
+        function update()
+        {
+            i++;
+            console.log(i);
+            var number_of_members = 6;
+            if(i > number_of_members);
+            {
+              i = 0;
+            }
+            var updatedimg = pics[i];
+            var updatedname = names[i];
+            document.getElementById("member_img").src = updatedimg;
+            document.getElementById("member_name").innerHTML = updatedname;
+        }
+    </script>
+</html>
